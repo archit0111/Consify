@@ -1,11 +1,10 @@
-
+// import { BrawoserRoutes, Routes , Route} from 'react-router-dom'
+import Dashboard from "./components/Dashboard"
 
 function App() {
 
   return (
-    <div className="bg-orange-400">
-      THis is COnsify page...
-    </div>
+    <Dashboard/>
   )
 }
 
