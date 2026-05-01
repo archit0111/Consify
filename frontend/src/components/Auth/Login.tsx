@@ -16,14 +16,17 @@ function Login(){
             const res = await fetch("http://localhost:8080/api/user/login",{
                 method:"POST",
                 headers:{
-                    "Content-Type":"application/json"
+                    "Content-Type":"application/json",
                 },
                 body:JSON.stringify(userData)
             });
+            const data = await res.json();
             alert("Login running!");
             if(!res.ok){
             alert("login fetch error!!");
             }else{
+                localStorage.setItem('token',data.token);
+                localStorage.setItem('refreshToken',data.refreshToken)
                 alert("login successfull!!");
                 navigate('/home');
             }

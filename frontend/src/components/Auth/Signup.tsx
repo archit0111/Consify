@@ -25,8 +25,8 @@ function Signup(){
             });
             alert("handel running!");
             if(res.ok){
-                alert("Signup Successfull!");
-                navigate('/home');
+                alert("Signup Successfull! Please login to begin!");
+                navigate('/login');
             }
         } catch (e) {
             alert('Error occred in login!');
